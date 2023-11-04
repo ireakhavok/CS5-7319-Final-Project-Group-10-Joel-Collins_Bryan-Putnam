@@ -1,0 +1,41 @@
+﻿@page "GameTable"
+@model GameButlerRazor.Pages.GameTableModel
+@{
+    Layout = "_LayoutNoHeaderFooter";
+}
+            <table id="GameTable" class="arrowes-table table-striped ">
+                <thead>
+                    <tr>
+                        <th onclick="sortTable(0)"><a>Name</a></th>
+                        <th onclick="sortTable(1)"><a>Players</a></th>
+                        <th onclick="sortTable(2)"><a>Playtime</a></th>
+                        <th onclick="sortTable(3)"><a>Last News</a></th>
+                        <th onclick="sortTable(4)"><a>Last Date Played</a></th>
+                        <th onclick="sortTable(5)"><a>Metacritic</a></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var item in Model.steamController.gameList.response.games.OrderByDescending(x => x.rtime_last_played))
+                    {
+                        <tr>
+                             @*Html.HiddenFor(m => item.Name) @Html.ActionLink(item.DriverName, "Operator", "Operators", new { area = "VehicleManagement", operatorId = item.DriverId }*@
+                            @{
+                            var url = "https://store.steampowered.com/app/" + @item.appid.ToString();
+                            }
+                            <td> <button class="tableRow" value=@url>@item.Name</button></td>
+                             @{
+                            url = "https://steamcharts.com/app/" + @item.appid.ToString();
+                            }
+                            <td> <button class="tableRow"  value=@url>@item.PlayerCount</button></td>
+                            <td>@item.Playtime</td>
+                            @{
+                            url = "https://store.steampowered.com/news/app/" + @item.appid.ToString();
+                            }
+                            <td><button class="tableRow"  value="@url">@item.LastNews</button></td>
+                            <td>@item.LastDatePlayed</td>
+                            <td> <button class="tableRow"  value="@item.MetacriticURL">@item.MetacriticScore</button></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>

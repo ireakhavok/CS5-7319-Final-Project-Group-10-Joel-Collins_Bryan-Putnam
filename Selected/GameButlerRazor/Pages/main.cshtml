@@ -1,0 +1,41 @@
+﻿@page
+@model GameButlerRazor.Pages.mainModel
+@{
+    ViewData["Title"] = "Your Games";
+}
+<style>
+    .vertical-padding {
+    margin-top: 10%;
+    max-height: 500px;
+    }
+
+    .align-center {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    }
+
+    .gameTable-container {
+    max-width: 100%;
+    max-height: 100%;
+    height: 700px;
+    width: 1200px;
+    }
+/*    .gameTable-webview {
+    max-width: 100%;
+    max-height: 100%;
+    height: 800px;
+    width: 400px;
+    }*/
+</style>
+<div class="container vertical-padding">
+    <h1 class="text-center">@ViewData["Title"]</h1>
+@*    <div class="row">
+        <input id="switchFocus" type="checkbox" checked="checked" >
+        <label for="switchFocus">Switch Focus</label>
+    </div>*@
+    <div class="row">
+        <iframe class="container gameTable-container" name="gameTable" src='@Url.Page("/GameTable")'></iframe>
+        @*<iframe id="gameTableWebview" class="gameTable-webview" src="https://www.steamcharts.com/"> </iframe>*@
+    </div>
+</div>

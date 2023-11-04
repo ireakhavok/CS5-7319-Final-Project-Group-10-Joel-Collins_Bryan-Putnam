@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SoftwareArchitectureWinformsApp.AuthForm">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="SoftwareArchitectureWinformsApp.AuthForm.typeOfForm">
+        <TypeIdentifier>
+          <NewMemberFileName>AuthForm.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACgAAACAAAIAAAAAEAAAAAgAAA=</HashCode>
+      <FileName>AuthForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftwareArchitectureWinformsApp.LoginForm">
+    <Position X="2" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAABAACACAAAECAAAIAABAAEAAIgAAAAA=</HashCode>
+      <FileName>LoginForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftwareArchitectureWinformsApp.MainForm">
+    <Position X="2.75" Y="3.25" Width="3.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="steamLoginHandle" Type="DAL_API.SteamLogin" FixedToPoint="true">
+      <Path>
+        <Point X="4.25" Y="4.55" />
+        <Point X="4.25" Y="5.75" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAQAACIAAAQQEACAAEAGoQAIAQSAPFABwQojCAA=</HashCode>
+      <FileName>MainForm.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="loginFormHandle" />
+      <Field Name="authformhandle" />
+      <Field Name="steamLoginHandle" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DAL_API.SteamLogin">
+    <Position X="2.75" Y="5.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="DAL_API.SteamLogin.RsaParameters" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GameButlerRazor.Pages.AuthKeyModel">
+    <Position X="11.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAEAIAAAAAAAEAAAAAAAAgAAAAAAAAAQAAAAAIAA=</HashCode>
+      <FileName>Pages\AuthKey.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameButlerRazor.Pages.ErrorModel">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAQAAAAAAAAAIAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Pages\Error.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameButlerRazor.Pages.GameTableModel">
+    <Position X="13" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAQAAAAAAAAgAAAAAAAAAAAAAQAAAIAAAA=</HashCode>
+      <FileName>Pages\GameTable.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameButlerRazor.Pages.IndexModel">
+    <Position X="5.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Pages\Index_original.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameButlerRazor.Pages.LoginModel">
+    <Position X="7.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAEAAQAAARAAAAQAgAAAAAA=</HashCode>
+      <FileName>Pages\Login.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameButlerRazor.Pages.LoginPasswordModel">
+    <Position X="9" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAQAAQAAAAAAAAAAAEAAgAAAAIAAAQAAgAAAEA=</HashCode>
+      <FileName>Pages\LoginPassword.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.AspNetCore.Mvc.RazorPages.Page">
+    <Position X="10.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

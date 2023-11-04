@@ -1,0 +1,70 @@
+﻿@page
+@model GameButlerRazor.Pages.LoginModel
+@{
+    ViewData["Title"] = "Log In";
+}
+@{
+    if (@Model.rsaJson.publickey_exp != null)
+    {
+
+        string exponent = @Model.rsaJson.publickey_exp;
+        string modulus = @Model.rsaJson.publickey_exp;
+
+    }
+}
+
+<style>
+    .vertical-padding {
+        margin-top: 10%;
+        max-height: 500px;
+    }
+
+    .align-center {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .login-container {
+        max-width: 30%;
+        max-height: 100%;
+    }
+
+    #login-form input[type="password"],
+    #login-form input[type="text"] {
+        width: 100%;
+        padding: 12px 36px 12px 12px;
+    }
+
+    .fa-eye {
+        position: relative;
+        bottom: 30px;
+        left: 44%;
+        color: lightgray;
+    }
+
+    .fa-eye-slash {
+        position: relative;
+        bottom: 30px;
+        left: 44%;
+        color: lightgray;
+    }
+</style>
+
+<body>
+    <div class="container vertical-padding">
+        <h1 class="text-center">@ViewData["Title"]</h1>
+        <div class="container login-container">
+            <form  method="post">
+                <div class="row p-3 align-center no-gutters">
+                    <div class="col-md"><input asp-for="username" type="text" class="w-100 form-control" id="user" placeholder="Username..." required /></div>
+                </div>
+                <div class="row p-3 align-center">
+                    <input id="loginButton" type="submit" class="btn-sm btn-secondary" style="width: 40%" >
+                </div>
+            </form>
+            <a class="align-center nav-link" style="color: gray" href="https://help.steampowered.com/en/wizard/HelpWithLogin?redir=https%3A%2F%2Fsteamcommunity.com%2Flogin%2Fhome%2F%3Fgoto%3D"><u>I Forgot My Steam Login</u></a>
+        </div>
+    </div>
+</body>
+@**@

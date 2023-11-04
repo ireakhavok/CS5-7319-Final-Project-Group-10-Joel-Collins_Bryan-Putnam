@@ -1,0 +1,69 @@
+﻿@page
+@model GameButlerRazor.Pages.AuthKeyModel
+@{
+    if (@Model.EmailAuthNeeded)
+        ViewData["Title"] = "Email Authenticator code:\n (In Email from Steam):";
+    else if (@Model.TwoFactorNeeded)
+        ViewData["Title"] = "Two Factor Authenticator code:\n (From steam app in phone):";
+    else if (@Model.authKeyneeded)
+        ViewData["Title"] = "Authentication code or key needed.\n https://steamcommunity.com/dev/apikey";
+}
+<style>
+    .vertical-padding {
+    margin-top: 10%;
+    max-height: 500px;
+    }
+
+    .align-center {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    }
+
+    .auth-container {
+    max-width: 60%;
+    max-height: 100%;
+    }
+</style>
+
+
+<div class="container vertical-padding">
+    <h1 class="text-center">@ViewData["Title"]</h1>
+    <div class="container auth-container">
+    <form method="post">
+        <input asp-for="authKeyneeded" type="hidden" value="@Model.authKeyneeded.ToString()" id="username">
+        @if (@Model.EmailAuthNeeded)
+        {
+            <div class="row p-3 align-center no-gutters">
+                <div class="col-md"><input type="text" asp-for="response" class="w-100 form-control" placeholder="Authentication Key..." /></div>
+            </div>
+            <div class="row p-3 align-center">
+                    <button class="btn-sm btn-secondary" id="authButton" type="submit" role="button" style="width: 40%">Submit</button>
+            </div>
+            //<a class="align-center nav-link" style="color: gray" href="https://steamcommunity.com/dev/apikey"><u>I Don't Have A Key</u></a>
+
+        }
+        else if (@Model.TwoFactorNeeded)
+        {
+            <div class="row p-3 align-center no-gutters">
+                    <div class="col-md"><input type="text" asp-for="response" class="w-100 form-control" placeholder="Two Factor Code..." /></div>
+            </div>
+            <div class="row p-3 align-center">
+                    <button class="btn-sm btn-secondary" id="authButton" type="submit" role="button" style="width: 40%">Submit</button>
+            </div>
+            //<a class="align-center nav-link" style="color: gray" href="https://steamcommunity.com/dev/apikey"><u>I Don't Have A Key</u></a>
+        }
+        else if (@Model.authKeyneeded)
+        {
+
+            <div class="row p-3 align-center no-gutters">
+                    <div class="col-md"><input type="password" asp-for="response" class="w-100 form-control" placeholder="Authentication Key..." /></div>
+            </div>
+            <div class="row p-3 align-center">
+                    <button class="btn-sm btn-secondary" id="authButton" type="submit" role="button" style="width: 40%">Submit</button>
+            </div>
+                <a class="align-center nav-link" style="color: gray" href="https://steamcommunity.com/dev/apikey"><u>I Don't Have A Key</u><i type="submit" /></a>
+        }
+    </form>
+    </div>
+</div>
